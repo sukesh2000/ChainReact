@@ -1,0 +1,11 @@
+{
+  "violations": [
+    {"category": "field_rename", "producer": "user-service", "field": "name->fullName",
+     "consumers": ["order-service", "recommendation-service", "quickbite"]},
+    {"category": "unit_mismatch", "producer": "order-service", "field": "total",
+     "consumers": ["recommendation-service", "quickbite"]},
+    {"category": "architecture", "repo": "user-service", "kind": "circular_dependency",
+     "cycle": ["user-service", "order-service", "user-service"], "requires_human": true}
+  ],
+  "decoys": []
+}

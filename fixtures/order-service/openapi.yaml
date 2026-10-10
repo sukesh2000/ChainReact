@@ -1,0 +1,13 @@
+openapi: 3.0.3
+info: {title: order-service, version: 1.4.0}
+paths:
+  /orders/{id}:
+    get:
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  total: {type: integer, description: "Order total in paise (1/100 rupee)"}  # SEEDED unit

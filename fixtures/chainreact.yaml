@@ -1,0 +1,7 @@
+services:
+  user-service: {path: user-service, spec: openapi.yaml}
+  order-service: {path: order-service, spec: openapi.yaml}
+  recommendation-service: {path: recommendation-service}
+  quickbite: {path: quickbite}
+edges:
+  - {consumer: order-service, producer: user-service}
